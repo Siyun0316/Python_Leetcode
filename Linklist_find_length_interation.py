@@ -36,5 +36,7 @@ for i in range(10):
 a = Solution().findLength(ListNode(2))
 b = Solution().findLength(None)
 c = Solution().findLength(test_hd)
-print (str(a) + ", " + str(b) + "," + str(c))
+print(str(a))
+print(str(b))
+print(str(c))
 '''
