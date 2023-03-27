@@ -37,14 +37,16 @@ class Linklist(object):
             pre, cur = cur,tmp
         self.head = pre
     
-    def display(self):
-        self.display_helper(self.head)
- 
-    def display_helper(self, current):
-        if current is None:
-            return
-        print(current.val, end = ' ')
-        self.display_helper(current.next)
+    def __str__(self):
+        if not self.head:
+            return "None"
+        strs = []
+        cur = self.head
+        while cur:
+            strs.append(str(cur.val))
+            cur = cur.next
+        return "->".join(strs)
+
  
 
 #time complexity O(n)
@@ -62,20 +64,20 @@ for i in range(10):
 b_list.append(1)
 
 print("list_a before reverse is ")
-a_list.display()
+print(a_list)
 print("\nlist_b before reverse is ")
-b_list.display()
+print(b_list)
 print("\nlist_c before reverse is ")
-c_list.display()
+print(c_list)
 
 a_list.reverse()
 b_list.reverse()
 c_list.reverse()
 
 print("\nlist_a after reverse is ")
-a_list.display()
+print(a_list)
 print("\nlist_b after reverse is ")
-b_list.display()
+print(b_list)
 print("\nlist_c after reverse is ")
-c_list.display()
+print(c_list)
 
