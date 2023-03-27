@@ -13,6 +13,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
+   
     def findLength(self, head):
         if not head:
             return 0
