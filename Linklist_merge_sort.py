@@ -12,6 +12,28 @@ class Listnode(object):
     def __init__(self, val):
         self.val = val
         self.next = None
+        
+class Linklist(object):
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        
+    def __str__(self):
+        strs = []
+        node = self.head
+        while node:
+            strs.append(str(node.val))
+            node = node.next
+        return "->".join(strs)
+    
+    def append(self,val):
+        if not self.head:
+            self.head = self.tail = Listnode(val)
+            return
+        newnode = Listnode(val)
+        self.tail.next = newnode
+        self.tail = self.tail.next
+        return 
 
 class Solution(object):
     def mergeSort(self, head):
@@ -25,14 +47,14 @@ class Solution(object):
 
     def split(self,head):
         if not head or not head.next:
-            return head, head
-        pre, s, f= head, head, head
+            return head, None
+        s, f= head, head.next
         while f and f.next:
-            pre = s
             s = s.next
             f = f.next.next
-            pre.next =None
-        return head, s
+        mid = s.next
+        s.next = None
+        return head, mid
 
     def merge(self,lh, rh):
         dummy = Listnode(None)
@@ -55,4 +77,36 @@ class Solution(object):
 
 # Time complexity O(nlogn)
 # Space complexity O(logn)
+
+#tests
+'''
+test_hd = Listnode(1)
+test_c = Linklist()
+
+print(test_c)
+c = Solution().mergeSort(test_c.head)
+sorted_list = Linklist()
+sorted_list.head = c
+print(sorted_list)
+
+for i in range(10):
+    if i == 0:
+        test_c.append(i+4)
+        print(test_c)
+        c = Solution().mergeSort(test_c.head)
+        sorted_list = Linklist()
+        sorted_list.head = c
+        print(sorted_list)
+    if i%2 ==0:
+        test_c.append(i+4)
+    else:
+        test_c.append(i*2+1)
+
+print(test_c)
+c = Solution().mergeSort(test_c.head)
+sorted_list = Linklist()
+sorted_list.head = c
+print(sorted_list)
+'''
+
         
