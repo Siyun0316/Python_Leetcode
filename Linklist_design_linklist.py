@@ -115,7 +115,7 @@ class Solution(object):
 
 # tests
 
-'''
+
 a_list = Solution()
 print(a_list.isEmpty())
 a_list.addHead(1)
@@ -133,7 +133,7 @@ print(a_list.get(2))
 print(a_list.get(5))
 print(a_list.get(6))
 print(a_list.isEmpty())
-'''
+
 
 
 
