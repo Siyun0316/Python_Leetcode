@@ -19,6 +19,7 @@ class Solution(object):
         self._head = None
         self.size = 0
         self._tail = None
+    #s O(1) t O(n)
     # get index node
     def _get (self, index):
         if self.size-1 < index:
@@ -27,14 +28,17 @@ class Solution(object):
         for i in range(index):
             cur = cur.next
         return cur
+    #s O(1) t O(n)
     # get index val
     def get(self, index):
         if self.size-1 < index:
             return -1
         return self._get(index).val
+    #s O(1) t O(1)
     # check empty
     def isEmpty(self):
         return self.size == 0
+    #s O(1) t O(1)
     # add at head
     def addHead(self, val):
         if self.isEmpty():
@@ -47,6 +51,7 @@ class Solution(object):
         self.size +=1
         return
     # add at tail
+    #s O(1) t O(1)
     def addTail(self,val):
         if self.isEmpty():
             self._head = self._tail = Listnode(val)
@@ -56,6 +61,8 @@ class Solution(object):
         self._tail = self._tail.next
         self.size +=1
         return
+
+    #s O(1) t O(n)
     # add at index position
     def addIndex(self, index, val):
         if self.size == index:
@@ -71,6 +78,7 @@ class Solution(object):
         newnode.next = tmp
         self.size +=1
         return
+    #s O(1) t O(n)
     # remove index postion
     def deleteIndex(self, index):
         if self.size <= index or index <0:
