@@ -19,3 +19,17 @@ class Solution(object):
         return self.findLength(head.next)+1
 
 # time & space O(n)
+
+# tests
+'''
+test_hd = ListNode(1)
+test_c = test_hd
+for i in range(10):    
+    test_c.next = ListNode((i%2)+1)
+    test_c = test_c.next
+
+a = Solution().findLength(ListNode(2))
+b = Solution().findLength(None)
+c = Solution().findLength(test_hd)
+print (str(a) + ", " + str(b) + "," + str(c))
+'''
