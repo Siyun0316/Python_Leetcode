@@ -13,3 +13,9 @@ class Solution(object):
 
 # time complexity O(m+n)
 # space complexity O(m)
+
+test_a = [1,2,3,4,5,6,7,8,9]
+test_b = [3,5,7,9,11,13,15]
+test_c = []
+print (Solution().common(test_a,test_b))
+print (Solution().common(test_a,test_c))
