@@ -63,28 +63,7 @@ class Solution(object):
 # space complexity O(logn)
 
 
-class Linklist(object):
-    def __init__(self):
-        self.head = None
-        self.tail = None
 
-    def __str__(self):
-        strs = []
-        node = self.head
-        while node:
-            strs.append(str(node.val))
-            node = node.next
-        return "->".join(strs)
-
-    def append(self,val):
-        if not self.head:
-            self.head = self.tail = Listnode(val)
-            return
-        newnode = Listnode(val)
-        self.tail.next = newnode
-        self.tail = self.tail.next
-        return
-'''
 class Linklist(object):
     def __init__(self):
         self.head = None
@@ -99,13 +78,14 @@ class Linklist(object):
         newnode = Listnode(val)
         self.tail.next = newnode
         self.tail = self.tail.next
+        self.size +=1
         return
 
     def size(self):
         return self.size
 
     def __str__(self):
-        if self.size == 0:
+        if not self.head:
             return "None"
         strs = []
         cur = self.head
@@ -113,7 +93,7 @@ class Linklist(object):
             strs.append(str(cur.val))
             cur = cur.next
         return "->".join(strs)
-        '''
+
 # test
 
 test_hd = Listnode(1)
