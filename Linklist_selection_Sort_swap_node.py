@@ -1,5 +1,5 @@
 
-# selection sort: swap value method
+# selection sort: swap node method
 class Listnode(object):
     def __init__(self,val):
         self.val = val
