@@ -15,6 +15,16 @@ class Solution(object):
         return -1
 # time complexity O(n)
 # space complexity O(n)
+    def missingNum2(self,array):
+        '''
+        :param array:
+        :return int:
+        '''
+        N = len(array)+1
+        return N*(N+1)//2 - sum(array)
+# time complexity O(n)
+# space complexity O(1)
+
 #test
 
 array1 = [1,2,3,4,6]
@@ -23,3 +33,7 @@ array3 = [2,3,4,5,6]
 print (Solution().missingNum(array1))
 print (Solution().missingNum(array2))
 print (Solution().missingNum(array3))
+
+print (Solution().missingNum2(array1))
+print (Solution().missingNum2(array2))
+print (Solution().missingNum2(array3))
