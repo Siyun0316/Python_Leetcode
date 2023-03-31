@@ -41,7 +41,7 @@ class Solution(object):
                 l = m
         return l if abs(array[l]-target) <= abs(array[r]-target) else r
 
-# time complexity O(logn)
+# time complexity O(logn + k)
 # space complexity O(1)
 
 #test
