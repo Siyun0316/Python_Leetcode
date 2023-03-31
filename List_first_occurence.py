@@ -23,8 +23,11 @@ class Solution(object):
             return r
         else:
             return -1
+
 # time complexity O(logn)
 # space complexity O(1)
+
+#test
 test = [1,3,5,7,9,11,11,11,13,15,15,15,15]
 print(Solution().firstOccurrence(test,15))
 print(Solution().firstOccurrence(test,12))
