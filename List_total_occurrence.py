@@ -8,7 +8,7 @@ class Solution(object):
             return -1
         first = self.firstOccurrence(arr,target)
         last = self.lastOccurrence(arr,target)
-        return last-first +1 if first != -1 else -1
+        return last-first +1 if first != -1 else 0
 
     def firstOccurrence(self,arr,target):
         if arr[-1] < target or arr[0] > target:
