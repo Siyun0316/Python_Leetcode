@@ -28,7 +28,7 @@ class Solution(object):
         '''
         :param nums list[int]:
         :param target int:
-        :return: list[int]
+        :return: list[list[int]]
         '''
         if not nums:
             return []
