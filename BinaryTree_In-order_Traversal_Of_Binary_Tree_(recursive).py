@@ -24,6 +24,21 @@ class Solution(object):
         self.helper(root.right,res)
         return
 
+    def inOrder2(self,root):
+        """
+        input: TreeNode root
+        return: Integer[]
+        """
+        if not root:
+            return []
+        res = []
+        self.helper(root.left,res)
+        res.append(root.val)
+        self.helper(root.right,res)
+        return res
+
+# time complexity O(n)
+# space complexity O(n)
 
 # Test case 1
 #      1
@@ -35,6 +50,7 @@ root = TreeNode(1)
 root.left = TreeNode(2)
 root.right = TreeNode(3)
 print(Solution().inOrder(root))
+print(Solution().inOrder2(root))
 
 # Test case 2
 #      1
@@ -45,6 +61,7 @@ print(Solution().inOrder(root))
 root = TreeNode(1)
 root.right = TreeNode(2)
 print(Solution().inOrder(root))
+print(Solution().inOrder2(root))
 
 # Test case 3
 #      1
@@ -60,8 +77,10 @@ root.right = TreeNode(3)
 root.right.left = TreeNode(4)
 root.right.right = TreeNode(5)
 print(Solution().inOrder(root))
+print(Solution().inOrder2(root))
 
 # Test case 4
 # Output: []
 
 print(Solution().inOrder(None))
+print(Solution().inOrder2(None))
