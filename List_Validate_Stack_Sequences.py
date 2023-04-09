@@ -36,6 +36,22 @@ class Solution(object):
                 j += 1
         return len(tmp) == 0
 
+    def validateStackSequences3(self,pushed,popped):
+        """
+        input: int[] pushed, int[] popped
+        return: boolean
+        """
+        tmp = []
+        j = 0
+        for x in popped:
+            while (not tmp or tmp[-1] != x) and j < len(pushed):
+                tmp.append(pushed[j])
+                j += 1
+            if tmp[-1] != x:
+                break
+            tmp.pop()
+        return len(tmp) == 0
+
 # time complexity O(n)
 # space complexity O(n)
 
@@ -46,6 +62,10 @@ popped2 = [4,3,5,1,2]
 
 print(Solution().validateStackSequences(pushed1,popped1))
 print(Solution().validateStackSequences(pushed2,popped2))
+
 print(Solution().validateStackSequences2(pushed1,popped1))
 print(Solution().validateStackSequences2(pushed2,popped2))
+
+print(Solution().validateStackSequences3(pushed1,popped1))
+print(Solution().validateStackSequences3(pushed2,popped2))
 
