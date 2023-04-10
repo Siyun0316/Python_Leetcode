@@ -22,7 +22,7 @@ class Solution(object):
         return res
 
 # time complexity O(n)
-# space complexity O(n)
+# space complexity O(logn) to O(n)
 
 # Test case 1
 #      1
