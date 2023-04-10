@@ -32,9 +32,9 @@ class Solution(object):
         if not root:
             return []
         res = []
-        self.helper(root.left,res)
+        res += self.inOrder2(root.left)
         res.append(root.val)
-        self.helper(root.right,res)
+        res += self.inOrder2(root.right)
         return res
 
 # time complexity O(n)
