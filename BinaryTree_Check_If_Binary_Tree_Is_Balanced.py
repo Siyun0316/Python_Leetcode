@@ -24,8 +24,8 @@ class Solution(object):
             return False
         return self.isBalanced(root.left) and self.isBalanced(root.right)
 
-# time complexity O(n)
-# space complexity O(height)
+# time complexity O(nlogn)
+# space complexity O(logn)
 
 # Test case 1
 #   1
