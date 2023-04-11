@@ -23,7 +23,7 @@ class Solution:
         if not root:
             return
         cur_sum += root.val
-        # if cur_sum - old_sum == target, res +=1
+        # if cur_sum - old_sum == target then res +=1
         old_sum = cur_sum - target
         self.res += cache.get(old_sum, 0)
         cache[cur_sum] = cache.get(cur_sum, 0) +1
