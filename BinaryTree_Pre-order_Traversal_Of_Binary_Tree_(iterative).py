@@ -30,7 +30,7 @@ class Solution(object):
         return res
 
 # time complexity O(n)
-# space complexity O(n)
+# space complexity O(height)
 
 # Test case 1
 #      1
