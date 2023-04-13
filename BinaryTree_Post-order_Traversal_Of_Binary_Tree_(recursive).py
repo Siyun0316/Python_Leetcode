@@ -13,9 +13,9 @@ class Solution(object):
         if not root:
             return []
         res = []
+        res += self.postOrder(root.left)
         res += self.postOrder(root.right)
         res.append(root.val)
-        res += self.postOrder(root.left)
         return res
 
 # time complexity O(n)
