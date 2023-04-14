@@ -122,12 +122,10 @@ print_list(linked_list)
 #   3    11
 #  / \   /
 # 1   4  8
-root = Solution().sortedListToBST(linked_list)
-print(printLayer(root))
-
-linked_list = ListNode(1, ListNode(3, ListNode(4, ListNode(5, ListNode(8, ListNode(11))))))
-print_list(linked_list)
 root = Solution().sortedListToBST2(linked_list)
+print(printLayer(root))
+# the findMid() changes the object.next, inplace split the link link list
+root = Solution().sortedListToBST(linked_list)
 print(printLayer(root))
 
 
@@ -141,12 +139,12 @@ print_list(linked_list)
 # /
 # 1
 #
-root = Solution().sortedListToBST(linked_list)
-print(printLayer(root))
-linked_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
-print_list(linked_list)
 root = Solution().sortedListToBST2(linked_list)
 print(printLayer(root))
+# the findMid() changes the object.next, inplace split the link link list
+root = Solution().sortedListToBST(linked_list)
+print(printLayer(root))
+
 
 # Test case 3:
 linked_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6))))))
@@ -158,10 +156,8 @@ print_list(linked_list)
 #  / \  /
 # 1   3 5
 #
-
-root = Solution().sortedListToBST(linked_list)
-print(printLayer(root))
-linked_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6))))))
-print_list(linked_list)
 root = Solution().sortedListToBST2(linked_list)
+print(printLayer(root))
+# the findMid() changes the object.next, inplace split the link link list
+root = Solution().sortedListToBST(linked_list)
 print(printLayer(root))
