@@ -58,7 +58,8 @@ class Solution(object):
 
 
 # time complexity O(nlogn)
-# space complexity O()
+# space complexity O(logn)
+
     def sortedListToBST2(self, head):
         """
         input: ListNode head
@@ -83,6 +84,8 @@ class Solution(object):
         root.right = self. createBST(arr[mid+1:])
         return root
 
+# time complexity O(n)
+# space complexity O(n)
 
 
 def printLayer(root):
