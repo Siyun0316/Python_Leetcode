@@ -59,6 +59,30 @@ class Solution(object):
 
 # time complexity O(nlogn)
 # space complexity O()
+    def sortedListToBST2(self, head):
+        """
+        input: ListNode head
+        return: TreeNode
+        """
+        if not head:
+            return None
+        if not head.next:
+            return TreeNode(head.val)
+        arr = []
+        cur = head
+        while cur:
+            arr.append(cur.val)
+            cur = cur.next
+        return self.createBST(arr)
+    def createBST(self, arr):
+        if not arr:
+            return None
+        mid = (len(arr))//2
+        root = TreeNode(arr[mid])
+        root.left = self.createBST(arr[:mid])
+        root.right = self. createBST(arr[mid+1:])
+        return root
+
 
 
 def printLayer(root):
@@ -101,6 +125,11 @@ print_list(linked_list)
 root = Solution().sortedListToBST(linked_list)
 print(printLayer(root))
 
+linked_list = ListNode(1, ListNode(3, ListNode(4, ListNode(5, ListNode(8, ListNode(11))))))
+print_list(linked_list)
+root = Solution().sortedListToBST2(linked_list)
+print(printLayer(root))
+
 
 # Test case 2:
 linked_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
@@ -113,6 +142,10 @@ print_list(linked_list)
 # 1
 #
 root = Solution().sortedListToBST(linked_list)
+print(printLayer(root))
+linked_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+print_list(linked_list)
+root = Solution().sortedListToBST2(linked_list)
 print(printLayer(root))
 
 # Test case 3:
@@ -127,4 +160,8 @@ print_list(linked_list)
 #
 
 root = Solution().sortedListToBST(linked_list)
+print(printLayer(root))
+linked_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6))))))
+print_list(linked_list)
+root = Solution().sortedListToBST2(linked_list)
 print(printLayer(root))
