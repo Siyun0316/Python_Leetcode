@@ -6,7 +6,6 @@
 # Examples
 # Input:     "abbc"
 # Output:  "bb"
-#
 # Input:     "abcbcbd"
 # Output:  "bcbcb"
 import unittest
