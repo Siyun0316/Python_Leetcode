@@ -30,6 +30,9 @@ class Solution(object):
         res.append(tmp)
         return ' '.join(res[::-1])
 
+# time complexity O(n)
+# space complexity O(1)
+
 class Test(unittest.TestCase):
     def test_reverse(self):
         _input = "I love Google"
