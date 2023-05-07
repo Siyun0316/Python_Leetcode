@@ -28,9 +28,11 @@ class Solution(object):
     """
     # write your solution here
     strs = sorted(strs)
-    for i in range(min(len(strs[0]),len(strs[-1]))):
+    i = 0
+    while i < min(len(strs[0]),len(strs[-1])):
       if strs[0][i] != strs[-1][i]:
         break
+      i += 1
     return strs[0][:i]
 
 # time complexity O(n*logn + m )
