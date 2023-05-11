@@ -25,10 +25,10 @@ class Solution(object):
             res.append(''.join(tmp))
             return
         # abc, a
-        self.dfs(set, res, tmp, idx+1)
         tmp.append(set[idx])
         self.dfs(set, res, tmp, idx+1)
         tmp.pop()
+        self.dfs(set, res, tmp, idx + 1)
         return
 
     def subSets2(self, set):
