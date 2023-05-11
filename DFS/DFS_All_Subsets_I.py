@@ -24,9 +24,10 @@ class Solution(object):
         if idx == len(set):
             res.append(''.join(tmp))
             return
-        # abc, a
+        # option1 add set[idx]
         tmp.append(set[idx])
         self.dfs(set, res, tmp, idx+1)
+        # option2 not add set[idx]
         tmp.pop()
         self.dfs(set, res, tmp, idx + 1)
         return
@@ -46,6 +47,7 @@ class Solution(object):
     def dfs2(self, set, res, tmp, idx):
         if idx < len(set):
             for i in range(idx, len(set)):
+                # not update tmp
                 self.dfs2(set, res, tmp + [set[i]], i+1)
         res.append(''.join(tmp))
 
