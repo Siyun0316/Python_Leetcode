@@ -49,7 +49,6 @@ class Solution(object):
                 self.dfs2(set, res, tmp + [set[i]], i+1)
         res.append(''.join(tmp))
 
-
 # time complexity O(2^n)
 # space complexity O(n)
 
