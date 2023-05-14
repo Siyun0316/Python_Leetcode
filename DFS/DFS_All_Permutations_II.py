@@ -17,7 +17,7 @@ class Solution(object):
         res = []
         inp = list(input)
         def dfs(idx):
-            if idx == len(input):
+            if idx + 1 == len(input):
                 res.append(''.join(inp))
                 return
             _exist = set()
